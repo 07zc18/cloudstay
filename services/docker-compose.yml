@@ -1,0 +1,15 @@
+api-gateway:
+    build: ./services/api-gateway
+    ports:
+      - "8000:8000"
+    environment:
+      - USER_SERVICE_URL=http://user-service:3001
+      - ROOM_SERVICE_URL=http://room-service:3002
+      - BOOKING_SERVICE_URL=http://booking-service:3003
+      - JWT_SECRET=your_jwt_secret
+      - PORT=8000
+    depends_on:
+      - user-service
+      - room-service
+      - booking-service
+    restart: unless-stopped
