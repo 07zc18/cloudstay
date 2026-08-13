@@ -3,1915 +3,2557 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../css/style1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CloudStay Hotel Booking System</title>
+    <title>CloudStay Hotel Booking System</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style1.css">
 
-<script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 
 </head>
 
 <body>
 
-	<!-- ================= HEADER ================= -->
-	
-	<header id="header"
-	  class="fixed inset-x-0 top-0 z-50 transition-colors duration-300 bg-transparent">
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
+    <header
+        id="header"
+        class="fixed inset-x-0 top-0 z-50 transition-colors duration-300 bg-transparent"
+    >
 
-	  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <div
+            class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
+        >
 
+            <!-- Logo -->
 
-		<!-- Logo -->
-		<a href="#home"
-		   id="logo"
-		   class="flex items-center gap-2 text-xl font-semibold transition-colors text-white">
+            <a
+                href="#home"
+                id="logo"
+                class="flex items-center gap-2 text-xl font-semibold transition-colors text-white"
+            >
 
-		  <i data-lucide="cloud"
-			 class="h-6 w-6 text-gold"
-			 stroke-width="2.2">
-		  </i>
+                <i
+                    data-lucide="cloud"
+                    class="h-6 w-6 text-gold"
+                    stroke-width="2.2"
+                ></i>
 
+                <span class="font-display text-2xl tracking-wide">
+                    CloudStay
+                </span>
 
-		  <span class="font-display text-2xl tracking-wide">
-			CloudStay
-		  </span>
+            </a>
 
-		</a>
 
+            <!-- Desktop Navigation -->
 
+            <nav class="hidden items-center gap-8 md:flex">
 
+                <a
+                    href="#home"
+                    class="nav-link group relative text-sm font-medium transition-colors text-white/90 hover:text-white"
+                >
+                    Home
 
+                    <span
+                        class="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full"
+                    ></span>
 
-		<!-- Desktop Navigation -->
-		<nav class="hidden items-center gap-8 md:flex">
+                </a>
 
 
-		  <a href="#home"
-			 class="nav-link group relative text-sm font-medium transition-colors text-white/90 hover:text-white">
+                <a
+                    href="#rooms"
+                    class="nav-link group relative text-sm font-medium transition-colors text-white/90 hover:text-white"
+                >
+                    Rooms
 
-			Home
+                    <span
+                        class="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full"
+                    ></span>
 
-			<span class="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full">
-			</span>
+                </a>
 
-		  </a>
 
+                <a
+                    href="#room-details"
+                    class="nav-link group relative text-sm font-medium transition-colors text-white/90 hover:text-white"
+                >
+                    Room Details
 
+                    <span
+                        class="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full"
+                    ></span>
 
-		  <a href="#rooms"
-			 class="nav-link group relative text-sm font-medium transition-colors text-white/90 hover:text-white">
+                </a>
 
-			Rooms
 
-			<span class="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full">
-			</span>
+                <a
+                    href="#booking"
+                    class="nav-link group relative text-sm font-medium transition-colors text-white/90 hover:text-white"
+                >
+                    Booking
 
-		  </a>
+                    <span
+                        class="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full"
+                    ></span>
 
+                </a>
 
 
-		  <a href="#booking"
-			 class="nav-link group relative text-sm font-medium transition-colors text-white/90 hover:text-white">
+                <a
+                    href="#booking-info"
+                    class="nav-link group relative text-sm font-medium transition-colors text-white/90 hover:text-white"
+                >
+                    My Booking
 
-			Booking
+                    <span
+                        class="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full"
+                    ></span>
 
-			<span class="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full">
-			</span>
+                </a>
 
-		  </a>
 
+                <a
+                    href="#login"
+                    class="nav-link group relative text-sm font-medium transition-colors text-white/90 hover:text-white"
+                >
+                    Login
 
+                    <span
+                        class="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full"
+                    ></span>
 
-		  <a href="#login"
-			 class="nav-link group relative text-sm font-medium transition-colors text-white/90 hover:text-white">
+                </a>
+
+
+                <a
+                    href="#signup"
+                    class="nav-link group relative text-sm font-medium transition-colors text-white/90 hover:text-white"
+                >
+                    Sign Up
 
-			Login
+                    <span
+                        class="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full"
+                    ></span>
 
-			<span class="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full">
-			</span>
+                </a>
 
-		  </a>
 
+                <a
+                    href="#booking"
+                    class="rounded-full bg-gold px-5 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-gold-dark"
+                >
+                    Book Now
+                </a>
 
+            </nav>
 
-		  <a href="#signup"
-			 class="nav-link group relative text-sm font-medium transition-colors text-white/90 hover:text-white">
 
-			Sign Up
+            <!-- Mobile Menu Button -->
 
-			<span class="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full">
-			</span>
+            <button
+                id="menuBtn"
+                type="button"
+                aria-label="Toggle menu"
+                class="md:hidden text-white"
+            >
 
-		  </a>
+                <i
+                    id="menuIcon"
+                    data-lucide="menu"
+                    class="h-6 w-6"
+                ></i>
 
+            </button>
 
+        </div>
 
-		  <a href="#booking"
-			 class="rounded-full bg-gold px-5 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-gold-dark">
 
-			Book Now
+        <!-- Mobile Menu -->
 
-		  </a>
+        <div
+            id="mobileMenu"
+            class="hidden border-t border-ink/5 bg-cream px-6 py-4 md:hidden"
+        >
 
+            <nav class="flex flex-col gap-4">
 
-		</nav>
+                <a
+                    href="#home"
+                    class="text-sm font-medium text-ink/80 hover:text-gold"
+                >
+                    Home
+                </a>
 
+                <a
+                    href="#rooms"
+                    class="text-sm font-medium text-ink/80 hover:text-gold"
+                >
+                    Rooms
+                </a>
 
+                <a
+                    href="#room-details"
+                    class="text-sm font-medium text-ink/80 hover:text-gold"
+                >
+                    Room Details
+                </a>
 
+                <a
+                    href="#booking"
+                    class="text-sm font-medium text-ink/80 hover:text-gold"
+                >
+                    Booking
+                </a>
 
+                <a
+                    href="#booking-info"
+                    class="text-sm font-medium text-ink/80 hover:text-gold"
+                >
+                    My Booking
+                </a>
 
-		<!-- Mobile Menu Button -->
-		<button
-		  id="menuBtn"
-		  type="button"
-		  aria-label="Toggle menu"
-		  class="md:hidden text-white">
+                <a
+                    href="#login"
+                    class="text-sm font-medium text-ink/80 hover:text-gold"
+                >
+                    Login
+                </a>
 
+                <a
+                    href="#signup"
+                    class="text-sm font-medium text-ink/80 hover:text-gold"
+                >
+                    Sign Up
+                </a>
 
-		  <i id="menuIcon"
-			 data-lucide="menu"
-			 class="h-6 w-6">
-		  </i>
+            </nav>
 
+        </div>
 
-		</button>
+    </header>
 
 
-	  </div>
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
+    <section
+        id="home"
+        class="relative flex min-h-screen w-full items-center"
+    >
 
+        <img
+            src="https://cdn.magicpatterns.com/patterns/generated-images/e65323fb-b255-4150-841d-acc7e82a94fe.jpg"
+            alt="CloudStay resort infinity pool overlooking the sea"
+            class="absolute inset-0 h-full w-full object-cover"
+        >
 
 
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/10"
+        ></div>
 
-	  <!-- Mobile Menu -->
-	  <div id="mobileMenu"
-		   class="hidden border-t border-ink/5 bg-cream px-6 py-4 md:hidden">
 
+        <div
+            class="relative mx-auto w-full max-w-6xl px-6"
+        >
 
-		<nav class="flex flex-col gap-4">
+            <div class="hero-animation max-w-xl text-white">
 
+                <span
+                    class="mb-5 inline-block rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] backdrop-blur"
+                >
+                    Premium Hospitality
+                </span>
 
-		  <a href="#home"
-			 class="text-sm font-medium text-ink/80 hover:text-gold">
-			Home
-		  </a>
 
+                <h1
+                    class="font-display text-5xl font-semibold leading-[1.05] sm:text-6xl lg:text-7xl"
+                >
+                    Your Comfortable Stay Starts Here
+                </h1>
 
-		  <a href="#rooms"
-			 class="text-sm font-medium text-ink/80 hover:text-gold">
-			Rooms
-		  </a>
 
+                <p
+                    class="mt-6 max-w-md text-lg text-white/85"
+                >
+                    Book premium rooms with CloudStay and settle into effortless
+                    comfort from the moment you arrive.
+                </p>
 
-		  <a href="#booking"
-			 class="text-sm font-medium text-ink/80 hover:text-gold">
-			Booking
-		  </a>
 
+                <div class="mt-9 flex flex-wrap gap-4">
 
-		  <a href="#login"
-			 class="text-sm font-medium text-ink/80 hover:text-gold">
-			Login
-		  </a>
+                    <a
+                        href="#rooms"
+                        class="group inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-gold-dark"
+                    >
+                        Explore Rooms
 
+                        <i
+                            data-lucide="arrow-right"
+                            class="h-4 w-4 transition-transform group-hover:translate-x-1"
+                        ></i>
 
-		  <a href="#signup"
-			 class="text-sm font-medium text-ink/80 hover:text-gold">
-			Sign Up
-		  </a>
+                    </a>
 
 
-		</nav>
+                    <a
+                        href="#booking"
+                        class="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                    >
+                        Make a Reservation
+                    </a>
 
+                </div>
 
-	  </div>
+            </div>
 
+        </div>
 
-	</header>
-	
-	<!-- ================= HERO ================= -->
-	<section id="home" 
-	class="relative flex min-h-screen w-full items-center">
+    </section>
 
 
-	  <!-- Hero Image -->
-	  <img
-		src="https://cdn.magicpatterns.com/patterns/generated-images/e65323fb-b255-4150-841d-acc7e82a94fe.jpg"
-		alt="CloudStay resort infinity pool overlooking the sea at golden hour"
-		class="absolute inset-0 h-full w-full object-cover"
-	  >
+    <!-- =====================================================
+         ROOMS
+    ====================================================== -->
 
+    <section
+        id="rooms"
+        class="w-full bg-cream py-24"
+    >
 
+        <div class="mx-auto max-w-6xl px-6">
 
-	  <!-- Dark Overlay -->
-	  <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/10">
-	  </div>
+            <div class="mx-auto mb-14 max-w-2xl text-center">
 
+                <span
+                    class="text-xs font-semibold uppercase tracking-[0.2em] text-gold"
+                >
+                    Our Rooms
+                </span>
 
+                <h2
+                    class="mt-3 font-display text-4xl font-semibold text-ink sm:text-5xl"
+                >
+                    Available Rooms
+                </h2>
 
-	  <!-- Content -->
-	  <div class="relative mx-auto w-full max-w-6xl px-6">
+                <p class="mt-4 text-ink/60">
+                    Choose the space that fits your stay — each thoughtfully
+                    designed for rest and comfort.
+                </p>
 
+            </div>
 
-		<div 
-		class="hero-animation max-w-xl text-white">
 
+            <div class="grid gap-8 md:grid-cols-3">
 
-		  <span
-		  class="mb-5 inline-block rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] backdrop-blur">
 
-			Premium Hospitality
+                <!-- Standard Room -->
 
-		  </span>
+                <article
+                    class="group flex flex-col overflow-hidden rounded-2xl border border-ink/5 bg-white shadow-sm transition-shadow hover:shadow-xl"
+                >
 
+                    <div class="relative h-52 overflow-hidden">
 
+                        <img
+                            src="https://cdn.magicpatterns.com/patterns/generated-images/d2169459-44e7-41ae-a327-d041d3d82876.jpg"
+                            alt="Standard Room"
+                            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        >
 
+                        <span
+                            class="absolute right-4 top-4 rounded-full bg-white/95 px-3 py-1 text-sm font-semibold text-ink shadow-sm"
+                        >
+                            RM150
+                            <span class="text-ink/50">
+                                / night
+                            </span>
+                        </span>
 
-		  <h1
-		  class="font-display text-5xl font-semibold leading-[1.05] sm:text-6xl lg:text-7xl">
+                    </div>
 
-			Your Comfortable Stay Starts Here
 
-		  </h1>
+                    <div class="flex flex-1 flex-col p-6">
 
+                        <h3 class="font-display text-2xl font-semibold text-ink">
+                            Standard Room
+                        </h3>
 
+                        <p class="mt-2 text-sm text-ink/60">
+                            Comfortable room with all the everyday essentials.
+                        </p>
 
 
+                        <ul class="mt-5 space-y-2">
 
-		  <p
-		  class="mt-6 max-w-md text-lg text-white/85">
+                            <li class="flex items-center gap-2 text-sm text-ink/70">
+                                <i
+                                    data-lucide="check"
+                                    class="h-4 w-4 text-gold"
+                                ></i>
+                                Queen bed
+                            </li>
 
-			Book premium rooms with CloudStay and settle into effortless
-			comfort from the moment you arrive.
+                            <li class="flex items-center gap-2 text-sm text-ink/70">
+                                <i
+                                    data-lucide="check"
+                                    class="h-4 w-4 text-gold"
+                                ></i>
+                                Free Wi-Fi
+                            </li>
 
-		  </p>
+                            <li class="flex items-center gap-2 text-sm text-ink/70">
+                                <i
+                                    data-lucide="check"
+                                    class="h-4 w-4 text-gold"
+                                ></i>
+                                Air conditioning
+                            </li>
 
+                        </ul>
 
 
+                        <a
+                            href="#room-details"
+                            onclick="showRoomDetails('Standard Room')"
+                            class="mt-6 inline-flex w-full items-center justify-center rounded-full border border-gold px-5 py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-white"
+                        >
+                            View Details
+                        </a>
 
+                    </div>
 
-		  <div class="mt-9 flex flex-wrap gap-4">
+                </article>
 
 
+                <!-- Deluxe Room -->
 
-			<!-- Explore Rooms Button -->
-			<a
-			href="#rooms"
-			class="group inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-gold-dark">
+                <article
+                    class="group flex flex-col overflow-hidden rounded-2xl border border-ink/5 bg-white shadow-sm transition-shadow hover:shadow-xl"
+                >
 
+                    <div class="relative h-52 overflow-hidden">
 
-			  Explore Rooms
+                        <img
+                            src="https://cdn.magicpatterns.com/patterns/generated-images/564fe8eb-5d60-44ad-904d-7e8be666014c.jpg"
+                            alt="Deluxe Room"
+                            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        >
 
+                        <span
+                            class="absolute right-4 top-4 rounded-full bg-white/95 px-3 py-1 text-sm font-semibold text-ink shadow-sm"
+                        >
+                            RM250
+                            <span class="text-ink/50">
+                                / night
+                            </span>
+                        </span>
 
-			  <i 
-			  data-lucide="arrow-right"
-			  class="h-4 w-4 transition-transform group-hover:translate-x-1">
-			  </i>
+                    </div>
 
 
-			</a>
+                    <div class="flex flex-1 flex-col p-6">
 
+                        <h3 class="font-display text-2xl font-semibold text-ink">
+                            Deluxe Room
+                        </h3>
 
+                        <p class="mt-2 text-sm text-ink/60">
+                            Spacious room with a sweeping city view.
+                        </p>
 
 
+                        <ul class="mt-5 space-y-2">
 
+                            <li class="flex items-center gap-2 text-sm text-ink/70">
+                                <i
+                                    data-lucide="check"
+                                    class="h-4 w-4 text-gold"
+                                ></i>
+                                King bed
+                            </li>
 
-			<!-- Booking Button -->
-			<a
-			href="#booking"
-			class="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10">
+                            <li class="flex items-center gap-2 text-sm text-ink/70">
+                                <i
+                                    data-lucide="check"
+                                    class="h-4 w-4 text-gold"
+                                ></i>
+                                City view
+                            </li>
 
+                            <li class="flex items-center gap-2 text-sm text-ink/70">
+                                <i
+                                    data-lucide="check"
+                                    class="h-4 w-4 text-gold"
+                                ></i>
+                                Work desk
+                            </li>
 
-			  Make a Reservation
+                        </ul>
 
 
-			</a>
+                        <a
+                            href="#room-details"
+                            onclick="showRoomDetails('Deluxe Room')"
+                            class="mt-6 inline-flex w-full items-center justify-center rounded-full border border-gold px-5 py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-white"
+                        >
+                            View Details
+                        </a>
 
+                    </div>
 
+                </article>
 
 
-		  </div>
+                <!-- Suite Room -->
 
+                <article
+                    class="group flex flex-col overflow-hidden rounded-2xl border border-ink/5 bg-white shadow-sm transition-shadow hover:shadow-xl"
+                >
 
-		</div>
+                    <div class="relative h-52 overflow-hidden">
 
+                        <img
+                            src="https://cdn.magicpatterns.com/patterns/generated-images/8215ac74-0de0-4d98-acac-d9ce936afc68.jpg"
+                            alt="Suite Room"
+                            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        >
 
-	  </div>
+                        <span
+                            class="absolute right-4 top-4 rounded-full bg-white/95 px-3 py-1 text-sm font-semibold text-ink shadow-sm"
+                        >
+                            RM500
+                            <span class="text-ink/50">
+                                / night
+                            </span>
+                        </span>
 
+                    </div>
 
-	</section>
-	
-	<!-- ================= ROOMS ================= -->
 
-	<section id="rooms" class="w-full bg-cream py-24">
+                    <div class="flex flex-1 flex-col p-6">
 
+                        <h3 class="font-display text-2xl font-semibold text-ink">
+                            Suite Room
+                        </h3>
 
-	<div class="mx-auto max-w-6xl px-6">
+                        <p class="mt-2 text-sm text-ink/60">
+                            Premium suite with luxury facilities throughout.
+                        </p>
 
 
+                        <ul class="mt-5 space-y-2">
 
-	<!-- Section Header -->
-	<div class="mx-auto mb-14 max-w-2xl text-center">
+                            <li class="flex items-center gap-2 text-sm text-ink/70">
+                                <i
+                                    data-lucide="check"
+                                    class="h-4 w-4 text-gold"
+                                ></i>
+                                Living area
+                            </li>
 
+                            <li class="flex items-center gap-2 text-sm text-ink/70">
+                                <i
+                                    data-lucide="check"
+                                    class="h-4 w-4 text-gold"
+                                ></i>
+                                Marble bath
+                            </li>
 
-	<span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                            <li class="flex items-center gap-2 text-sm text-ink/70">
+                                <i
+                                    data-lucide="check"
+                                    class="h-4 w-4 text-gold"
+                                ></i>
+                                Lounge access
+                            </li>
 
-	Our Rooms
+                        </ul>
 
-	</span>
 
+                        <a
+                            href="#room-details"
+                            onclick="showRoomDetails('Suite Room')"
+                            class="mt-6 inline-flex w-full items-center justify-center rounded-full border border-gold px-5 py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-white"
+                        >
+                            View Details
+                        </a>
 
+                    </div>
 
-	<h2 class="mt-3 font-display text-4xl font-semibold text-ink sm:text-5xl">
+                </article>
 
-	Available Rooms
+            </div>
 
-	</h2>
+        </div>
 
+    </section>
 
 
-	<p class="mt-4 text-ink/60">
+    <!-- =====================================================
+         ROOM DETAILS
+    ====================================================== -->
 
-	Choose the space that fits your stay — each thoughtfully designed for rest and comfort.
+    <section
+        id="room-details"
+        class="w-full bg-sand py-24"
+    >
 
-	</p>
+        <div class="mx-auto max-w-5xl px-6">
 
+            <div class="mb-12 text-center">
 
-	</div>
+                <span
+                    class="text-xs font-semibold uppercase tracking-[0.2em] text-gold"
+                >
+                    Room Information
+                </span>
 
+                <h2
+                    class="mt-3 font-display text-4xl font-semibold text-ink sm:text-5xl"
+                >
+                    View Room Details
+                </h2>
 
+                <p class="mx-auto mt-4 max-w-2xl text-ink/60">
+                    Explore the facilities, capacity and pricing available
+                    for each CloudStay room.
+                </p>
 
+            </div>
 
 
+            <div
+                id="roomDetailsCard"
+                class="overflow-hidden rounded-2xl border border-ink/5 bg-white shadow-lg"
+            >
 
+                <div class="grid lg:grid-cols-2">
 
-	<!-- Room Cards -->
-	<div class="grid gap-8 md:grid-cols-3">
+                    <div class="h-full min-h-[320px]">
 
+                        <img
+                            id="detailsImage"
+                            src="https://cdn.magicpatterns.com/patterns/generated-images/d2169459-44e7-41ae-a327-d041d3d82876.jpg"
+                            alt="Room details"
+                            class="h-full w-full object-cover"
+                        >
 
+                    </div>
 
 
+                    <div class="p-8 lg:p-10">
 
-	<!-- Standard Room -->
-	<article
-	class="room-animation group flex flex-col overflow-hidden rounded-2xl border border-ink/5 bg-white shadow-sm transition-shadow hover:shadow-xl">
+                        <span
+                            id="detailsType"
+                            class="text-xs font-semibold uppercase tracking-[0.2em] text-gold"
+                        >
+                            Standard Room
+                        </span>
 
 
-	<div class="relative h-52 overflow-hidden">
+                        <h3
+                            id="detailsTitle"
+                            class="mt-3 font-display text-4xl font-semibold text-ink"
+                        >
+                            Standard Room
+                        </h3>
 
 
-	<img
-	src="https://cdn.magicpatterns.com/patterns/generated-images/d2169459-44e7-41ae-a327-d041d3d82876.jpg"
-	alt="Standard Room interior"
-	class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-	>
+                        <p
+                            id="detailsDescription"
+                            class="mt-4 leading-7 text-ink/60"
+                        >
+                            Comfortable room with all the everyday essentials.
+                        </p>
 
 
-	<span class="absolute right-4 top-4 rounded-full bg-white/95 px-3 py-1 text-sm font-semibold text-ink shadow-sm">
+                        <div class="mt-6 grid grid-cols-2 gap-4">
 
-	RM150
+                            <div class="rounded-xl bg-cream p-4">
 
-	<span class="text-ink/50">
-	/ night
-	</span>
+                                <i
+                                    data-lucide="users"
+                                    class="h-5 w-5 text-gold"
+                                ></i>
 
-	</span>
+                                <p class="mt-2 text-xs text-ink/50">
+                                    Capacity
+                                </p>
 
+                                <p
+                                    id="detailsCapacity"
+                                    class="font-semibold text-ink"
+                                >
+                                    2 Guests
+                                </p>
 
-	</div>
+                            </div>
 
 
+                            <div class="rounded-xl bg-cream p-4">
 
+                                <i
+                                    data-lucide="bed-double"
+                                    class="h-5 w-5 text-gold"
+                                ></i>
 
+                                <p class="mt-2 text-xs text-ink/50">
+                                    Bed
+                                </p>
 
-	<div class="flex flex-1 flex-col p-6">
+                                <p
+                                    id="detailsBed"
+                                    class="font-semibold text-ink"
+                                >
+                                    Queen Bed
+                                </p>
 
+                            </div>
 
-	<h3 class="font-display text-2xl font-semibold text-ink">
+                        </div>
 
-	Standard Room
 
-	</h3>
+                        <div class="mt-6">
 
+                            <p class="text-sm text-ink/50">
+                                Room Price
+                            </p>
 
+                            <p
+                                id="detailsPrice"
+                                class="mt-1 font-display text-3xl font-semibold text-gold"
+                            >
+                                RM150 / night
+                            </p>
 
-	<p class="mt-2 text-sm text-ink/60">
+                        </div>
 
-	Comfortable room with all the everyday essentials.
 
-	</p>
+                        <a
+                            href="#booking"
+                            class="mt-7 inline-flex rounded-full bg-gold px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-gold-dark"
+                        >
+                            Book This Room
+                        </a>
 
+                    </div>
 
+                </div>
 
+            </div>
 
+        </div>
 
-	<ul class="mt-5 space-y-2">
+    </section>
 
 
-	<li class="flex items-center gap-2 text-sm text-ink/70">
+    <!-- =====================================================
+         BOOKING
+    ====================================================== -->
 
-	<i data-lucide="check"
-	class="h-4 w-4 text-gold"
-	stroke-width="2.5">
-	</i>
+    <section
+        id="booking"
+        class="w-full bg-cream py-24"
+    >
 
-	Queen bed
+        <div
+            class="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2"
+        >
 
-	</li>
+            <div>
 
+                <span
+                    class="text-xs font-semibold uppercase tracking-[0.2em] text-gold"
+                >
+                    Reserve
+                </span>
 
 
-	<li class="flex items-center gap-2 text-sm text-ink/70">
+                <h2
+                    class="mt-3 font-display text-4xl font-semibold text-ink sm:text-5xl"
+                >
+                    Make a Reservation
+                </h2>
 
-	<i data-lucide="check"
-	class="h-4 w-4 text-gold"
-	stroke-width="2.5">
-	</i>
 
-	Free Wi-Fi
+                <p class="mt-4 max-w-md text-ink/60">
+                    Select your room type and dates, and we'll have everything
+                    ready for your arrival.
+                </p>
 
-	</li>
 
+                <div class="mt-8 flex items-center gap-3 text-sm text-ink/70">
 
+                    <i
+                        data-lucide="calendar"
+                        class="h-5 w-5 text-gold"
+                    ></i>
 
-	<li class="flex items-center gap-2 text-sm text-ink/70">
+                    Flexible cancellation up to 48 hours before check-in.
 
-	<i data-lucide="check"
-	class="h-4 w-4 text-gold"
-	stroke-width="2.5">
-	</i>
+                </div>
 
-	Air conditioning
+            </div>
 
-	</li>
 
+            <div
+                class="rounded-2xl border border-ink/5 bg-white p-8 shadow-lg"
+            >
 
-	</ul>
+                <div id="bookingForm">
 
+                    <form
+                        id="bookingFormElement"
+                        class="space-y-5"
+                    >
 
+                        <div>
 
+                            <label
+                                for="roomType"
+                                class="mb-1.5 block text-sm font-medium text-ink/80"
+                            >
+                                Room Type
+                            </label>
 
-	<a href="#booking"
-	class="mt-6 inline-flex w-full items-center justify-center rounded-full border border-gold px-5 py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-white">
 
-	Book Now
+                            <select
+                                id="roomType"
+                                class="w-full rounded-lg border border-ink/15 bg-cream px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-gold focus:ring-2 focus:ring-gold/20"
+                            >
 
-	</a>
+                                <option value="Standard Room">
+                                    Standard Room
+                                </option>
 
+                                <option value="Deluxe Room">
+                                    Deluxe Room
+                                </option>
 
+                                <option value="Suite Room">
+                                    Suite Room
+                                </option>
 
-	</div>
+                            </select>
 
+                        </div>
 
-	</article>
 
+                        <div class="grid gap-5 sm:grid-cols-2">
 
+                            <div>
 
+                                <label
+                                    for="checkIn"
+                                    class="mb-1.5 block text-sm font-medium text-ink/80"
+                                >
+                                    Check-in Date
+                                </label>
 
 
+                                <input
+                                    id="checkIn"
+                                    type="date"
+                                    required
+                                    class="w-full rounded-lg border border-ink/15 bg-cream px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-gold focus:ring-2 focus:ring-gold/20"
+                                >
 
+                            </div>
 
 
+                            <div>
 
-	<!-- Deluxe Room -->
-	<article
-	class="room-animation group flex flex-col overflow-hidden rounded-2xl border border-ink/5 bg-white shadow-sm transition-shadow hover:shadow-xl">
+                                <label
+                                    for="checkOut"
+                                    class="mb-1.5 block text-sm font-medium text-ink/80"
+                                >
+                                    Check-out Date
+                                </label>
 
 
-	<div class="relative h-52 overflow-hidden">
+                                <input
+                                    id="checkOut"
+                                    type="date"
+                                    required
+                                    class="w-full rounded-lg border border-ink/15 bg-cream px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-gold focus:ring-2 focus:ring-gold/20"
+                                >
 
+                            </div>
 
-	<img
-	src="https://cdn.magicpatterns.com/patterns/generated-images/564fe8eb-5d60-44ad-904d-7e8be666014c.jpg"
-	alt="Deluxe Room interior"
-	class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-	>
+                        </div>
 
 
-	<span class="absolute right-4 top-4 rounded-full bg-white/95 px-3 py-1 text-sm font-semibold text-ink shadow-sm">
+                        <p
+                            id="bookingError"
+                            class="hidden rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700"
+                        ></p>
 
-	RM250
 
-	<span class="text-ink/50">
-	/ night
-	</span>
+                        <button
+                            type="submit"
+                            class="w-full rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-gold-dark"
+                        >
+                            Confirm Booking
+                        </button>
 
-	</span>
+                    </form>
 
+                </div>
 
-	</div>
 
+                <!-- Confirmation -->
 
+                <div
+                    id="confirmation"
+                    class="hidden flex-col items-center py-10 text-center"
+                >
 
+                    <i
+                        data-lucide="circle-check"
+                        class="h-14 w-14 text-gold"
+                        stroke-width="1.6"
+                    ></i>
 
 
-	<div class="flex flex-1 flex-col p-6">
+                    <h3
+                        class="mt-4 font-display text-2xl font-semibold text-ink"
+                    >
+                        Booking Confirmed
+                    </h3>
 
 
-	<h3 class="font-display text-2xl font-semibold text-ink">
+                    <p
+                        id="message"
+                        class="mt-2 text-sm text-ink/60"
+                    ></p>
 
-	Deluxe Room
 
-	</h3>
+                    <a
+                        href="#booking-info"
+                        class="mt-6 rounded-full bg-gold px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-gold-dark"
+                    >
+                        View Booking Information
+                    </a>
 
 
+                    <button
+                        id="newBookingButton"
+                        type="button"
+                        class="mt-3 rounded-full border border-gold px-6 py-2.5 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-white"
+                    >
+                        Make Another Booking
+                    </button>
 
-	<p class="mt-2 text-sm text-ink/60">
+                </div>
 
-	Spacious room with a sweeping city view.
+            </div>
 
-	</p>
+        </div>
 
+    </section>
 
 
+    <!-- =====================================================
+         BOOKING INFORMATION
+    ====================================================== -->
 
+    <section
+        id="booking-info"
+        class="w-full bg-sand py-24"
+    >
 
-	<ul class="mt-5 space-y-2">
+        <div class="mx-auto max-w-5xl px-6">
 
+            <div class="mb-12 text-center">
 
-	<li class="flex items-center gap-2 text-sm text-ink/70">
-	<i data-lucide="check" class="h-4 w-4 text-gold" stroke-width="2.5"></i>
-	King bed
-	</li>
+                <span
+                    class="text-xs font-semibold uppercase tracking-[0.2em] text-gold"
+                >
+                    Reservation
+                </span>
 
+                <h2
+                    class="mt-3 font-display text-4xl font-semibold text-ink sm:text-5xl"
+                >
+                    Booking Information
+                </h2>
 
-	<li class="flex items-center gap-2 text-sm text-ink/70">
-	<i data-lucide="check" class="h-4 w-4 text-gold" stroke-width="2.5"></i>
-	City view
-	</li>
+                <p class="mt-4 text-ink/60">
+                    View your latest CloudStay reservation details.
+                </p>
 
+            </div>
 
-	<li class="flex items-center gap-2 text-sm text-ink/70">
-	<i data-lucide="check" class="h-4 w-4 text-gold" stroke-width="2.5"></i>
-	Work desk
-	</li>
 
+            <!-- No Booking -->
 
-	</ul>
+            <div
+                id="noBooking"
+                class="rounded-2xl border border-ink/5 bg-white p-10 text-center shadow-lg"
+            >
 
+                <i
+                    data-lucide="calendar-x"
+                    class="mx-auto h-12 w-12 text-gold"
+                ></i>
 
 
-	<a href="#booking"
-	class="mt-6 inline-flex w-full items-center justify-center rounded-full border border-gold px-5 py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-white">
+                <h3
+                    class="mt-4 font-display text-2xl font-semibold text-ink"
+                >
+                    No Booking Found
+                </h3>
 
-	Book Now
 
-	</a>
+                <p class="mt-2 text-sm text-ink/60">
+                    You have not made a booking yet.
+                </p>
 
 
-	</div>
+                <a
+                    href="#booking"
+                    class="mt-6 inline-flex rounded-full bg-gold px-6 py-3 text-sm font-semibold text-white hover:bg-gold-dark"
+                >
+                    Make a Booking
+                </a>
 
+            </div>
 
-	</article>
 
+            <!-- Booking Information Card -->
 
+            <div
+                id="bookingDetails"
+                class="hidden overflow-hidden rounded-2xl border border-ink/5 bg-white shadow-lg"
+            >
 
+                <div
+                    class="flex items-center justify-between border-b border-ink/5 p-6"
+                >
 
+                    <div>
 
+                        <span
+                            class="text-xs font-semibold uppercase tracking-[0.2em] text-gold"
+                        >
+                            Confirmed Reservation
+                        </span>
 
+                        <h3
+                            class="mt-2 font-display text-3xl font-semibold text-ink"
+                        >
+                            Your Booking
+                        </h3>
 
+                    </div>
 
 
-	<!-- Suite Room -->
-	<article
-	class="room-animation group flex flex-col overflow-hidden rounded-2xl border border-ink/5 bg-white shadow-sm transition-shadow hover:shadow-xl">
+                    <span
+                        class="rounded-full bg-green-50 px-4 py-2 text-sm font-semibold text-green-700"
+                    >
+                        Confirmed
+                    </span>
 
+                </div>
 
-	<div class="relative h-52 overflow-hidden">
 
+                <div class="grid gap-6 p-6 sm:grid-cols-2 lg:grid-cols-4">
 
-	<img
-	src="https://cdn.magicpatterns.com/patterns/generated-images/8215ac74-0de0-4d98-acac-d9ce936afc68.jpg"
-	alt="Suite Room interior"
-	class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-	>
+                    <div class="rounded-xl bg-cream p-5">
 
+                        <i
+                            data-lucide="bed-double"
+                            class="h-5 w-5 text-gold"
+                        ></i>
 
-	<span class="absolute right-4 top-4 rounded-full bg-white/95 px-3 py-1 text-sm font-semibold text-ink shadow-sm">
+                        <p class="mt-3 text-xs text-ink/50">
+                            Room Type
+                        </p>
 
-	RM500
+                        <p
+                            id="infoRoom"
+                            class="mt-1 font-semibold text-ink"
+                        >
+                            -
+                        </p>
 
-	<span class="text-ink/50">
-	/ night
-	</span>
+                    </div>
 
-	</span>
 
+                    <div class="rounded-xl bg-cream p-5">
 
-	</div>
+                        <i
+                            data-lucide="calendar-check"
+                            class="h-5 w-5 text-gold"
+                        ></i>
 
+                        <p class="mt-3 text-xs text-ink/50">
+                            Check-in
+                        </p>
 
+                        <p
+                            id="infoCheckIn"
+                            class="mt-1 font-semibold text-ink"
+                        >
+                            -
+                        </p>
 
+                    </div>
 
 
-	<div class="flex flex-1 flex-col p-6">
+                    <div class="rounded-xl bg-cream p-5">
 
+                        <i
+                            data-lucide="calendar-check-2"
+                            class="h-5 w-5 text-gold"
+                        ></i>
 
-	<h3 class="font-display text-2xl font-semibold text-ink">
+                        <p class="mt-3 text-xs text-ink/50">
+                            Check-out
+                        </p>
 
-	Suite Room
+                        <p
+                            id="infoCheckOut"
+                            class="mt-1 font-semibold text-ink"
+                        >
+                            -
+                        </p>
 
-	</h3>
+                    </div>
 
 
+                    <div class="rounded-xl bg-cream p-5">
 
-	<p class="mt-2 text-sm text-ink/60">
+                        <i
+                            data-lucide="banknote"
+                            class="h-5 w-5 text-gold"
+                        ></i>
 
-	Premium suite with luxury facilities throughout.
+                        <p class="mt-3 text-xs text-ink/50">
+                            Price Per Night
+                        </p>
 
-	</p>
+                        <p
+                            id="infoPrice"
+                            class="mt-1 font-semibold text-ink"
+                        >
+                            -
+                        </p>
 
+                    </div>
 
+                </div>
 
 
+                <div
+                    class="border-t border-ink/5 p-6"
+                >
 
-	<ul class="mt-5 space-y-2">
+                    <div class="grid gap-4 sm:grid-cols-3">
 
+                        <div>
 
-	<li class="flex items-center gap-2 text-sm text-ink/70">
-	<i data-lucide="check" class="h-4 w-4 text-gold" stroke-width="2.5"></i>
-	Living area
-	</li>
+                            <p class="text-xs text-ink/50">
+                                Booking ID
+                            </p>
 
+                            <p
+                                id="infoBookingId"
+                                class="mt-1 font-semibold text-ink"
+                            >
+                                -
+                            </p>
 
-	<li class="flex items-center gap-2 text-sm text-ink/70">
-	<i data-lucide="check" class="h-4 w-4 text-gold" stroke-width="2.5"></i>
-	Marble bath
-	</li>
+                        </div>
 
 
-	<li class="flex items-center gap-2 text-sm text-ink/70">
-	<i data-lucide="check" class="h-4 w-4 text-gold" stroke-width="2.5"></i>
-	Lounge access
-	</li>
+                        <div>
 
+                            <p class="text-xs text-ink/50">
+                                Number of Nights
+                            </p>
 
-	</ul>
+                            <p
+                                id="infoNights"
+                                class="mt-1 font-semibold text-ink"
+                            >
+                                -
+                            </p>
 
+                        </div>
 
 
+                        <div>
 
-	<a href="#booking"
-	class="mt-6 inline-flex w-full items-center justify-center rounded-full border border-gold px-5 py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-white">
+                            <p class="text-xs text-ink/50">
+                                Total Amount
+                            </p>
 
-	Book Now
+                            <p
+                                id="infoTotal"
+                                class="mt-1 text-xl font-semibold text-gold"
+                            >
+                                -
+                            </p>
 
-	</a>
+                        </div>
 
+                    </div>
 
+                </div>
 
-	</div>
 
+                <div
+                    class="flex flex-wrap gap-3 border-t border-ink/5 p-6"
+                >
 
-	</article>
+                    <a
+                        href="#booking"
+                        class="rounded-full bg-gold px-6 py-3 text-sm font-semibold text-white hover:bg-gold-dark"
+                    >
+                        Make Another Booking
+                    </a>
 
-	</div>
 
-	</div>
+                    <button
+                        id="clearBookingButton"
+                        type="button"
+                        class="rounded-full border border-red-300 px-6 py-3 text-sm font-semibold text-red-600 hover:bg-red-50"
+                    >
+                        Clear Booking
+                    </button>
 
-	</section>
-	
-	<!-- ================= BOOKING ================= -->
+                </div>
 
-	<section id="booking" class="w-full bg-sand py-24">
-	  <div class="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
+            </div>
 
-		<div>
-		  <span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-			Reserve
-		  </span>
+        </div>
 
-		  <h2 class="mt-3 font-display text-4xl font-semibold text-ink sm:text-5xl">
-			Make a Reservation
-		  </h2>
+    </section>
 
-		  <p class="mt-4 max-w-md text-ink/60">
-			Select your room type and dates, and we'll have everything ready for
-			your arrival. Instant confirmation, no hidden fees.
-		  </p>
 
-		  <div class="mt-8 flex items-center gap-3 text-sm text-ink/70">
-			<i data-lucide="calendar" class="h-5 w-5 text-gold"></i>
-			Flexible cancellation up to 48 hours before check-in.
-		  </div>
-		</div>
+    <!-- =====================================================
+         LOGIN
+    ====================================================== -->
 
+    <section
+        id="login"
+        class="w-full bg-cream py-24"
+    >
 
-		<div class="rounded-2xl border border-ink/5 bg-white p-8 shadow-lg">
+        <div class="mx-auto max-w-md px-6">
 
-		  <div id="bookingForm">
+            <div class="mb-8 text-center">
 
-			<form id="form" class="space-y-5">
+                <span
+                    class="text-xs font-semibold uppercase tracking-[0.2em] text-gold"
+                >
+                    Members
+                </span>
 
-			  <div>
-				<label class="mb-1.5 block text-sm font-medium text-ink/80">
-				  Room Type
-				</label>
+                <h2
+                    class="mt-3 font-display text-4xl font-semibold text-ink"
+                >
+                    User Login
+                </h2>
 
-				<select 
-				  id="roomType"
-				  class="w-full rounded-lg border border-ink/15 bg-cream px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-gold focus:ring-2 focus:ring-gold/20">
+                <p class="mt-3 text-sm text-ink/60">
+                    Sign in to manage your bookings.
+                </p>
 
-				  <option>Standard Room</option>
-				  <option>Deluxe Room</option>
-				  <option>Suite Room</option>
+            </div>
 
-				</select>
-			  </div>
 
+            <form
+                id="loginForm"
+                class="space-y-5 rounded-2xl border border-ink/5 bg-white p-8 shadow-lg"
+            >
 
-			  <div class="grid gap-5 sm:grid-cols-2">
+                <div>
 
-				<div>
-				  <label class="mb-1.5 block text-sm font-medium text-ink/80">
-					Check-in Date
-				  </label>
+                    <label
+                        for="loginEmail"
+                        class="mb-1.5 block text-sm font-medium text-ink/80"
+                    >
+                        Email
+                    </label>
 
-				  <input
-					id="checkIn"
-					type="date"
-					required
-					class="w-full rounded-lg border border-ink/15 bg-cream px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-gold focus:ring-2 focus:ring-gold/20"
-				  >
-				</div>
 
+                    <div class="relative">
 
-				<div>
-				  <label class="mb-1.5 block text-sm font-medium text-ink/80">
-					Check-out Date
-				  </label>
+                        <i
+                            data-lucide="mail"
+                            class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40"
+                        ></i>
 
-				  <input
-					id="checkOut"
-					type="date"
-					required
-					class="w-full rounded-lg border border-ink/15 bg-cream px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-gold focus:ring-2 focus:ring-gold/20"
-				  >
-				</div>
 
-			  </div>
+                        <input
+                            id="loginEmail"
+                            type="email"
+                            required
+                            placeholder="you@example.com"
+                            class="w-full rounded-lg border border-ink/15 bg-cream py-3 pl-10 pr-4 text-sm text-ink outline-none focus:border-gold focus:ring-2 focus:ring-gold/20"
+                        >
 
+                    </div>
 
-			  <button
-				type="submit"
-				class="w-full rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-gold-dark">
+                </div>
 
-				Confirm Booking
 
-			  </button>
+                <div>
 
-			</form>
+                    <label
+                        for="loginPassword"
+                        class="mb-1.5 block text-sm font-medium text-ink/80"
+                    >
+                        Password
+                    </label>
 
-		  </div>
 
+                    <div class="relative">
 
+                        <i
+                            data-lucide="lock"
+                            class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40"
+                        ></i>
 
-		  <div id="confirmation" class="hidden flex-col items-center py-10 text-center">
 
-			<i data-lucide="circle-check"
-			  class="h-14 w-14 text-gold"
-			  stroke-width="1.6">
-			</i>
+                        <input
+                            id="loginPassword"
+                            type="password"
+                            required
+                            placeholder="••••••••"
+                            class="w-full rounded-lg border border-ink/15 bg-cream py-3 pl-10 pr-4 text-sm text-ink outline-none focus:border-gold focus:ring-2 focus:ring-gold/20"
+                        >
 
+                    </div>
 
-			<h3 class="mt-4 font-display text-2xl font-semibold text-ink">
-			  Booking Confirmed
-			</h3>
+                </div>
 
 
-			<p id="message" class="mt-2 text-sm text-ink/60"></p>
+                <p
+                    id="loginError"
+                    class="hidden rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700"
+                ></p>
 
 
-			<button
-			  onclick="newBooking()"
-			  class="mt-6 rounded-full border border-gold px-6 py-2.5 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-white">
+                <button
+                    type="submit"
+                    class="w-full rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-white hover:bg-gold-dark"
+                >
+                    Login
+                </button>
 
-			  Make Another Booking
 
-			</button>
+                <p
+                    id="loginSuccess"
+                    class="hidden text-center text-sm font-medium text-green-600"
+                >
+                    Welcome back! You're signed in.
+                </p>
 
-		  </div>
 
+                <p class="text-center text-sm text-ink/50">
 
-		</div>
+                    New here?
 
-	  </div>
-	</section>
-	
-	<!-- ================= LOGIN ================= -->
+                    <a
+                        href="#signup"
+                        class="font-medium text-gold hover:underline"
+                    >
+                        Create an account
+                    </a>
 
-	<section id="login" class="w-full bg-cream py-24">
+                </p>
 
+            </form>
 
-	  <div class="mx-auto max-w-md px-6">
+        </div>
 
+    </section>
 
-		<!-- Header -->
-		<div class="mb-8 text-center">
 
+    <!-- =====================================================
+         SIGN UP
+    ====================================================== -->
 
-		  <span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+    <section
+        id="signup"
+        class="w-full bg-sand py-24"
+    >
 
-			Members
+        <div
+            class="mx-auto grid max-w-5xl overflow-hidden rounded-3xl border border-ink/5 bg-white shadow-xl lg:grid-cols-[0.88fr_1.12fr]"
+        >
 
-		  </span>
+            <!-- Left -->
 
+            <aside
+                class="flex flex-col justify-between bg-ink px-8 py-10 text-white sm:px-12 lg:py-12"
+            >
 
+                <div>
 
-		  <h2 class="mt-3 font-display text-4xl font-semibold text-ink">
+                    <span
+                        class="text-xs font-semibold uppercase tracking-[0.2em] text-gold"
+                    >
+                        CloudStay Members
+                    </span>
 
-			User Login
 
-		  </h2>
+                    <h2
+                        class="mt-4 font-display text-4xl font-semibold leading-tight sm:text-5xl"
+                    >
+                        A more rewarding way to stay.
+                    </h2>
 
 
+                    <p
+                        class="mt-5 max-w-sm text-sm leading-6 text-white/65"
+                    >
+                        Create your complimentary account for effortless
+                        booking and thoughtful member benefits.
+                    </p>
 
-		  <p class="mt-3 text-sm text-ink/60">
+                </div>
 
-			Sign in to manage your bookings and unlock member rates.
 
-		  </p>
+                <ul class="mt-10 space-y-4 text-sm text-white/75">
 
+                    <li class="flex items-start gap-3">
 
-		</div>
+                        <i
+                            data-lucide="circle-check"
+                            class="mt-0.5 h-4 w-4 shrink-0 text-gold"
+                        ></i>
 
+                        Manage every stay in one place
 
+                    </li>
 
 
+                    <li class="flex items-start gap-3">
 
-		<!-- Login Form -->
-		<form
-		  id="loginForm"
-		  class="space-y-5 rounded-2xl border border-ink/5 bg-white p-8 shadow-lg"
-		>
+                        <i
+                            data-lucide="circle-check"
+                            class="mt-0.5 h-4 w-4 shrink-0 text-gold"
+                        ></i>
 
+                        Unlock member-only rates
 
+                    </li>
 
-		  <!-- Email -->
-		  <div>
 
+                    <li class="flex items-start gap-3">
 
-			<label class="mb-1.5 block text-sm font-medium text-ink/80">
+                        <i
+                            data-lucide="circle-check"
+                            class="mt-0.5 h-4 w-4 shrink-0 text-gold"
+                        ></i>
 
-			  Email
+                        Save your booking details securely
 
-			</label>
+                    </li>
 
+                </ul>
 
+            </aside>
 
-			<div class="relative">
 
+            <!-- Right -->
 
-			  <i
-			  data-lucide="mail"
-			  class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40">
-			  </i>
+            <div class="px-6 py-10 sm:px-12 lg:py-12">
 
+                <!-- Success -->
 
+                <div
+                    id="successBox"
+                    class="hidden min-h-[400px] flex-col items-center justify-center text-center"
+                >
 
-			  <input
-				id="email"
-				type="email"
-				required
-				placeholder="you@example.com"
-				class="w-full rounded-lg border border-ink/15 bg-cream py-3 pl-10 pr-4 text-sm text-ink outline-none transition-colors placeholder:text-ink/35 focus:border-gold focus:ring-2 focus:ring-gold/20"
-			  >
+                    <i
+                        data-lucide="circle-check"
+                        class="h-14 w-14 text-gold"
+                    ></i>
 
 
-			</div>
+                    <h2
+                        class="mt-5 font-display text-3xl font-semibold text-ink"
+                    >
+                        Welcome to CloudStay
+                    </h2>
 
 
-		  </div>
+                    <p class="mt-3 max-w-sm text-sm leading-6 text-ink/60">
+                        Your account has been created. You can now sign in.
+                    </p>
 
 
+                    <a
+                        href="#login"
+                        class="mt-7 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-white hover:bg-gold-dark"
+                    >
+                        Go to Login
+                    </a>
 
+                </div>
 
 
+                <!-- Signup -->
 
-		  <!-- Password -->
-		  <div>
+                <div id="signupContent">
 
+                    <span
+                        class="text-xs font-semibold uppercase tracking-[0.2em] text-gold"
+                    >
+                        New here?
+                    </span>
 
-			<label class="mb-1.5 block text-sm font-medium text-ink/80">
 
-			  Password
+                    <h2
+                        class="mt-3 font-display text-4xl font-semibold text-ink"
+                    >
+                        Create your account
+                    </h2>
 
-			</label>
 
+                    <p class="mt-3 text-sm text-ink/60">
+                        It only takes a moment to join CloudStay.
+                    </p>
 
 
+                    <form
+                        id="signupForm"
+                        class="mt-8 space-y-5"
+                        novalidate
+                    >
 
-			<div class="relative">
+                        <!-- Full Name -->
 
+                        <div>
 
-			  <i
-			  data-lucide="lock"
-			  class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40">
-			  </i>
+                            <label
+                                for="signupFullName"
+                                class="mb-1.5 block text-sm font-medium text-ink/80"
+                            >
+                                Full name
+                            </label>
 
 
+                            <div class="relative">
 
-			  <input
-				id="password"
-				type="password"
-				required
-				placeholder="••••••••"
-				class="w-full rounded-lg border border-ink/15 bg-cream py-3 pl-10 pr-4 text-sm text-ink outline-none transition-colors placeholder:text-ink/35 focus:border-gold focus:ring-2 focus:ring-gold/20"
-			  >
+                                <i
+                                    data-lucide="user"
+                                    class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40"
+                                ></i>
 
 
-			</div>
+                                <input
+                                    id="signupFullName"
+                                    type="text"
+                                    required
+                                    placeholder="Your full name"
+                                    class="w-full rounded-lg border border-ink/15 bg-cream py-3 pl-10 pr-4 text-sm text-ink outline-none focus:border-gold focus:ring-2 focus:ring-gold/20"
+                                >
 
+                            </div>
 
-		  </div>
+                        </div>
 
 
+                        <!-- Email -->
 
+                        <div>
 
+                            <label
+                                for="signupEmail"
+                                class="mb-1.5 block text-sm font-medium text-ink/80"
+                            >
+                                Email address
+                            </label>
 
 
+                            <div class="relative">
 
-		  <!-- Button -->
-		  <button
-			type="submit"
-			class="w-full rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-gold-dark"
-		  >
+                                <i
+                                    data-lucide="mail"
+                                    class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40"
+                                ></i>
 
-			Login
 
-		  </button>
+                                <input
+                                    id="signupEmail"
+                                    type="email"
+                                    required
+                                    placeholder="you@example.com"
+                                    class="w-full rounded-lg border border-ink/15 bg-cream py-3 pl-10 pr-4 text-sm text-ink outline-none focus:border-gold focus:ring-2 focus:ring-gold/20"
+                                >
 
+                            </div>
 
+                        </div>
 
 
+                        <!-- Passwords -->
 
+                        <div class="grid gap-5 sm:grid-cols-2">
 
+                            <div>
 
-		  <!-- Success Message -->
-		  <p
-		  id="successMessage"
-		  class="hidden text-center text-sm font-medium text-gold">
+                                <label
+                                    for="signupPassword"
+                                    class="mb-1.5 block text-sm font-medium text-ink/80"
+                                >
+                                    Password
+                                </label>
 
-			Welcome back! You're signed in.
 
-		  </p>
+                                <div class="relative">
 
+                                    <i
+                                        data-lucide="lock"
+                                        class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40"
+                                    ></i>
 
 
+                                    <input
+                                        id="signupPassword"
+                                        type="password"
+                                        required
+                                        placeholder="8+ characters"
+                                        class="w-full rounded-lg border border-ink/15 bg-cream py-3 pl-10 pr-4 text-sm text-ink outline-none focus:border-gold focus:ring-2 focus:ring-gold/20"
+                                    >
 
+                                </div>
 
+                            </div>
 
 
-		  <!-- Signup -->
-		  <p class="text-center text-sm text-ink/50">
+                            <div>
 
-			New here?
+                                <label
+                                    for="confirmPassword"
+                                    class="mb-1.5 block text-sm font-medium text-ink/80"
+                                >
+                                    Confirm password
+                                </label>
 
-			<a
-			href="#signup"
-			class="font-medium text-gold hover:underline">
 
-			  Create an account
+                                <div class="relative">
 
-			</a>
+                                    <i
+                                        data-lucide="lock"
+                                        class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40"
+                                    ></i>
 
 
-		  </p>
+                                    <input
+                                        id="confirmPassword"
+                                        type="password"
+                                        required
+                                        placeholder="Repeat password"
+                                        class="w-full rounded-lg border border-ink/15 bg-cream py-3 pl-10 pr-4 text-sm text-ink outline-none focus:border-gold focus:ring-2 focus:ring-gold/20"
+                                    >
 
+                                </div>
 
+                            </div>
 
-		</form>
+                        </div>
 
 
-	  </div>
+                        <!-- Terms -->
 
+                        <label
+                            class="flex cursor-pointer items-start gap-3 text-sm leading-5 text-ink/60"
+                        >
 
-	</section>
-	
-	<!-- ================= SIGN UP ================= -->
-	<section id="signup" class="w-full bg-sand py-24">
+                            <input
+                                id="terms"
+                                type="checkbox"
+                                class="mt-0.5 h-4 w-4 rounded border-ink/30 text-gold focus:ring-gold"
+                            >
 
+                            <span>
+                                I agree to the terms of service and privacy policy.
+                            </span>
 
-	<div class="mx-auto grid max-w-5xl overflow-hidden rounded-3xl border border-ink/5 bg-white shadow-xl lg:grid-cols-[0.88fr_1.12fr]">
+                        </label>
 
 
+                        <!-- Error -->
 
-	<!-- Left Side -->
-	<aside class="flex flex-col justify-between bg-ink px-8 py-10 text-white sm:px-12 lg:py-12">
+                        <p
+                            id="signupError"
+                            class="hidden rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700"
+                        ></p>
 
 
-	<div>
+                        <button
+                            type="submit"
+                            class="w-full rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-white hover:bg-gold-dark"
+                        >
+                            Create Account
+                        </button>
 
-	<span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                    </form>
 
-	CloudStay Members
 
-	</span>
+                    <p class="mt-6 text-center text-sm text-ink/50">
 
+                        Already have an account?
 
-	<h2 class="mt-4 font-display text-4xl font-semibold leading-tight sm:text-5xl">
+                        <a
+                            href="#login"
+                            class="font-medium text-gold hover:underline"
+                        >
+                            Sign in
+                        </a>
 
-	A more rewarding way to stay.
+                    </p>
 
-	</h2>
+                </div>
 
+            </div>
 
-	<p class="mt-5 max-w-sm text-sm leading-6 text-white/65">
+        </div>
 
-	Create your complimentary account for effortless booking and thoughtful member benefits.
+    </section>
 
-	</p>
 
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
-	</div>
+    <footer class="w-full bg-ink text-white/70">
 
+        <div class="mx-auto max-w-6xl px-6 py-14">
 
+            <div
+                class="flex flex-col items-center justify-between gap-8 md:flex-row"
+            >
 
+                <div class="text-center md:text-left">
 
+                    <a
+                        href="#home"
+                        class="flex items-center justify-center gap-2 md:justify-start"
+                    >
 
-	<ul class="mt-10 space-y-4 text-sm text-white/75">
+                        <i
+                            data-lucide="cloud"
+                            class="h-6 w-6 text-gold"
+                        ></i>
 
+                        <span
+                            class="font-display text-2xl font-semibold text-white"
+                        >
+                            CloudStay
+                        </span>
 
-	<li class="flex items-start gap-3">
+                    </a>
 
-	<i data-lucide="circle-check"
-	class="mt-0.5 h-4 w-4 shrink-0 text-gold">
-	</i>
 
-	Manage every stay in one place
+                    <p class="mt-3 max-w-xs text-sm text-white/50">
+                        Premium rooms and effortless booking for your most
+                        comfortable stay.
+                    </p>
 
-	</li>
+                </div>
 
 
+                <nav class="flex flex-wrap justify-center gap-6 text-sm">
 
-	<li class="flex items-start gap-3">
+                    <a href="#home">Home</a>
+                    <a href="#rooms">Rooms</a>
+                    <a href="#room-details">Room Details</a>
+                    <a href="#booking">Booking</a>
+                    <a href="#booking-info">My Booking</a>
+                    <a href="#login">Login</a>
+                    <a href="#signup">Sign Up</a>
 
-	<i data-lucide="circle-check"
-	class="mt-0.5 h-4 w-4 shrink-0 text-gold">
-	</i>
+                </nav>
 
-	Unlock member-only rates
+            </div>
 
-	</li>
 
+            <div
+                class="mt-12 border-t border-white/10 pt-6 text-center text-sm"
+            >
+                © 2026 CloudStay Hotel Booking System
+            </div>
 
+        </div>
 
-	<li class="flex items-start gap-3">
+    </footer>
 
-	<i data-lucide="circle-check"
-	class="mt-0.5 h-4 w-4 shrink-0 text-gold">
-	</i>
 
-	Save your booking details securely
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
-	</li>
+    <script>
 
+        /* =====================================================
+           INITIALISE LUCIDE ICONS
+        ====================================================== */
 
-	</ul>
+        lucide.createIcons();
 
 
-	</aside>
+        /* =====================================================
+           HEADER
+        ====================================================== */
 
+        const header = document.getElementById("header");
+        const logo = document.getElementById("logo");
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = document.getElementById("menuIcon");
 
 
+        window.addEventListener("scroll", function () {
 
+            if (window.scrollY > 24) {
 
+                header.classList.remove("bg-transparent");
 
+                header.classList.add(
+                    "bg-cream/90",
+                    "shadow-sm",
+                    "backdrop-blur",
+                    "border-b",
+                    "border-ink/5"
+                );
 
+                logo.classList.remove("text-white");
+                logo.classList.add("text-ink");
 
-	<!-- Right Side -->
+                menuBtn.classList.remove("text-white");
+                menuBtn.classList.add("text-ink");
 
-	<div class="px-6 py-10 sm:px-12 lg:py-12">
+            } else {
 
+                header.classList.add("bg-transparent");
 
+                header.classList.remove(
+                    "bg-cream/90",
+                    "shadow-sm",
+                    "backdrop-blur",
+                    "border-b",
+                    "border-ink/5"
+                );
 
+                logo.classList.remove("text-ink");
+                logo.classList.add("text-white");
 
+                menuBtn.classList.remove("text-ink");
+                menuBtn.classList.add("text-white");
 
-	<!-- Success Message -->
+            }
 
-	<div id="successBox"
-	class="hidden flex min-h-[400px] flex-col items-center justify-center text-center">
+        });
 
 
-	<i data-lucide="circle-check"
-	class="h-14 w-14 text-gold"
-	stroke-width="1.5">
-	</i>
+        /* =====================================================
+           MOBILE MENU
+        ====================================================== */
 
+        menuBtn.addEventListener("click", function () {
 
-	<h2 class="mt-5 font-display text-3xl font-semibold text-ink">
+            const isHidden = mobileMenu.classList.contains("hidden");
 
-	Welcome to CloudStay
+            if (isHidden) {
 
-	</h2>
+                mobileMenu.classList.remove("hidden");
 
+                menuIcon.setAttribute(
+                    "data-lucide",
+                    "x"
+                );
 
-	<p class="mt-3 max-w-sm text-sm leading-6 text-ink/60">
+            } else {
 
-	Your account has been created. You can now sign in and begin planning your next stay.
+                mobileMenu.classList.add("hidden");
 
-	</p>
+                menuIcon.setAttribute(
+                    "data-lucide",
+                    "menu"
+                );
 
+            }
 
-	<a href="#login"
-	class="mt-7 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-gold-dark">
+            lucide.createIcons();
 
-	Go to Login
+        });
 
-	</a>
 
+        document
+            .querySelectorAll("#mobileMenu a")
+            .forEach(function (link) {
 
-	</div>
+                link.addEventListener("click", function () {
 
+                    mobileMenu.classList.add("hidden");
 
+                    menuIcon.setAttribute(
+                        "data-lucide",
+                        "menu"
+                    );
 
+                    lucide.createIcons();
 
+                });
 
+            });
 
 
+        /* =====================================================
+           ROOM DETAILS
+        ====================================================== */
 
+        const roomData = {
 
-	<!-- Signup Form -->
+            "Standard Room": {
 
-	<div id="signupContent">
+                image:
+                    "https://cdn.magicpatterns.com/patterns/generated-images/d2169459-44e7-41ae-a327-d041d3d82876.jpg",
 
+                description:
+                    "A comfortable and practical room designed for a relaxing stay with all the essential facilities.",
 
-	<div>
+                capacity:
+                    "2 Guests",
 
+                bed:
+                    "Queen Bed",
 
-	<span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                price:
+                    150
 
-	New here?
+            },
 
-	</span>
 
+            "Deluxe Room": {
 
-	<h2 class="mt-3 font-display text-4xl font-semibold text-ink">
+                image:
+                    "https://cdn.magicpatterns.com/patterns/generated-images/564fe8eb-5d60-44ad-904d-7e8be666014c.jpg",
 
-	Create your account
+                description:
+                    "A spacious room featuring a king bed, beautiful city views and a dedicated work area.",
 
-	</h2>
+                capacity:
+                    "2 Guests",
 
+                bed:
+                    "King Bed",
 
-	<p class="mt-3 text-sm text-ink/60">
+                price:
+                    250
 
-	It only takes a moment to join CloudStay.
+            },
 
-	</p>
 
+            "Suite Room": {
 
-	</div>
+                image:
+                    "https://cdn.magicpatterns.com/patterns/generated-images/8215ac74-0de0-4d98-acac-d9ce936afc68.jpg",
 
+                description:
+                    "Our premium suite provides additional space, a living area, luxury facilities and lounge access.",
 
+                capacity:
+                    "4 Guests",
 
+                bed:
+                    "King Bed",
 
+                price:
+                    500
 
+            }
 
+        };
 
-	<form id="signupForm"
-	class="mt-8 space-y-5"
-	novalidate>
 
+        function showRoomDetails(roomName) {
 
+            const room = roomData[roomName];
 
+            if (!room) {
+                return;
+            }
 
-	<!-- Full Name -->
 
-	<div>
+            document.getElementById("detailsImage").src =
+                room.image;
 
-	<label class="mb-1.5 block text-sm font-medium text-ink/80">
+            document.getElementById("detailsImage").alt =
+                roomName;
 
-	Full name
+            document.getElementById("detailsType").textContent =
+                roomName;
 
-	</label>
+            document.getElementById("detailsTitle").textContent =
+                roomName;
 
+            document.getElementById("detailsDescription").textContent =
+                room.description;
 
-	<div class="relative">
+            document.getElementById("detailsCapacity").textContent =
+                room.capacity;
 
+            document.getElementById("detailsBed").textContent =
+                room.bed;
 
-	<i data-lucide="user"
-	class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40">
-	</i>
+            document.getElementById("detailsPrice").textContent =
+                "RM" + room.price + " / night";
 
 
-	<input
-	id="fullName"
-	type="text"
-	required
-	placeholder="Your full name"
-	class="w-full rounded-lg border border-ink/15 bg-cream py-3 pl-10 pr-4 text-sm text-ink outline-none transition-colors placeholder:text-ink/35 focus:border-gold focus:ring-2 focus:ring-gold/20"
-	/>
+            document.getElementById("roomType").value =
+                roomName;
 
+        }
 
-	</div>
 
-	</div>
+        /* =====================================================
+           BOOKING
+        ====================================================== */
 
+        const bookingFormElement =
+            document.getElementById("bookingFormElement");
 
+        const bookingFormContainer =
+            document.getElementById("bookingForm");
 
+        const confirmation =
+            document.getElementById("confirmation");
 
+        const bookingError =
+            document.getElementById("bookingError");
 
+        const newBookingButton =
+            document.getElementById("newBookingButton");
 
 
+        bookingFormElement.addEventListener(
+            "submit",
+            function (event) {
 
-	<!-- Email -->
+                event.preventDefault();
 
-	<div>
 
-	<label class="mb-1.5 block text-sm font-medium text-ink/80">
+                const room =
+                    document.getElementById("roomType").value;
 
-	Email address
+                const checkIn =
+                    document.getElementById("checkIn").value;
 
-	</label>
+                const checkOut =
+                    document.getElementById("checkOut").value;
 
 
-	<div class="relative">
+                bookingError.classList.add("hidden");
 
 
-	<i data-lucide="mail"
-	class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40">
-	</i>
+                if (!checkIn || !checkOut) {
 
+                    bookingError.textContent =
+                        "Please select both check-in and check-out dates.";
 
-	<input
-	id="email"
-	type="email"
-	required
-	placeholder="you@example.com"
-	class="w-full rounded-lg border border-ink/15 bg-cream py-3 pl-10 pr-4 text-sm text-ink outline-none transition-colors placeholder:text-ink/35 focus:border-gold focus:ring-2 focus:ring-gold/20"
-	/>
+                    bookingError.classList.remove("hidden");
 
+                    return;
 
-	</div>
+                }
 
-	</div>
 
+                const checkInDate =
+                    new Date(checkIn);
 
+                const checkOutDate =
+                    new Date(checkOut);
 
 
+                if (checkOutDate <= checkInDate) {
 
+                    bookingError.textContent =
+                        "Check-out date must be after the check-in date.";
 
+                    bookingError.classList.remove("hidden");
 
+                    return;
 
-	<!-- Passwords -->
+                }
 
-	<div class="grid gap-5 sm:grid-cols-2">
 
+                const roomPrice =
+                    roomData[room].price;
 
-	<div>
 
+                const millisecondsPerDay =
+                    1000 * 60 * 60 * 24;
 
-	<label class="mb-1.5 block text-sm font-medium text-ink/80">
 
-	Password
+                const numberOfNights =
+                    Math.round(
+                        (checkOutDate - checkInDate)
+                        / millisecondsPerDay
+                    );
 
-	</label>
 
+                const totalAmount =
+                    roomPrice * numberOfNights;
 
-	<div class="relative">
 
+                const bookingId =
+                    "CS-" +
+                    Date.now().toString().slice(-6);
 
-	<i data-lucide="lock"
-	class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40">
-	</i>
 
+                const booking = {
 
-	<input
-	id="password"
-	type="password"
-	required
-	placeholder="8+ characters"
-	class="w-full rounded-lg border border-ink/15 bg-cream py-3 pl-10 pr-4 text-sm text-ink outline-none transition-colors placeholder:text-ink/35 focus:border-gold focus:ring-2 focus:ring-gold/20"
-	/>
+                    bookingId: bookingId,
 
+                    room: room,
 
-	</div>
+                    checkIn: checkIn,
 
+                    checkOut: checkOut,
 
-	</div>
+                    nights: numberOfNights,
 
+                    pricePerNight: roomPrice,
 
+                    total: totalAmount
 
+                };
 
 
+                /* Save booking */
 
+                localStorage.setItem(
+                    "cloudstayBooking",
+                    JSON.stringify(booking)
+                );
 
-	<div>
 
+                /* Show confirmation */
 
-	<label class="mb-1.5 block text-sm font-medium text-ink/80">
+                bookingFormContainer.classList.add(
+                    "hidden"
+                );
 
-	Confirm password
+                confirmation.classList.remove(
+                    "hidden"
+                );
 
-	</label>
+                confirmation.classList.add(
+                    "flex"
+                );
 
 
-	<div class="relative">
+                document.getElementById(
+                    "message"
+                ).textContent =
+                    "Your " +
+                    room.toLowerCase() +
+                    " has been reserved from " +
+                    checkIn +
+                    " to " +
+                    checkOut +
+                    ".";
 
 
-	<i data-lucide="lock"
-	class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40">
-	</i>
+                displayBooking(booking);
 
-
-	<input
-	id="confirmPassword"
-	type="password"
-	required
-	placeholder="Repeat password"
-	class="w-full rounded-lg border border-ink/15 bg-cream py-3 pl-10 pr-4 text-sm text-ink outline-none transition-colors placeholder:text-ink/35 focus:border-gold focus:ring-2 focus:ring-gold/20"
-	/>
-
-
-	</div>
-
-
-	</div>
-
-
-	</div>
-
-
-
-
-
-
-
-
-	<!-- Terms -->
-
-	<label class="flex cursor-pointer items-start gap-3 text-sm leading-5 text-ink/60">
-
-
-	<input
-	id="terms"
-	type="checkbox"
-	class="mt-0.5 h-4 w-4 rounded border-ink/30 text-gold focus:ring-gold"
-	/>
-
-
-	<span>
-
-	I agree to the terms of service and privacy policy.
-
-	</span>
-
-
-	</label>
-
-
-
-
-
-
-
-	<!-- Error -->
-
-	<p id="errorMessage"
-	class="hidden rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
-	</p>
-
-
-
-
-
-
-
-	<button
-	type="submit"
-	class="w-full rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-gold-dark">
-
-	Create Account
-
-	</button>
-
-
-	</form>
-
-
-
-
-
-	<p class="mt-6 text-center text-sm text-ink/50">
-
-	Already have an account?
-
-	<a href="#login"
-	class="font-medium text-gold hover:underline">
-
-	Sign in
-
-	</a>
-
-	</p>
-
-
-	</div>
-
-
-	</div>
-
-
-	</div>
-
-
-	</section>
-
-</body>
-
-	<!-- ================= FOOTER ================= -->
-<footer class="w-full bg-ink text-white/70">
-
-<div class="mx-auto max-w-6xl px-6 py-14">
-
-<div class="flex flex-col items-center justify-between gap-8 md:flex-row">
-
-
-<div class="text-center md:text-left">
-
-<a href="#home"
-class="flex items-center justify-center gap-2 md:justify-start">
-
-<i data-lucide="cloud"
-class="h-6 w-6 text-gold">
-</i>
-
-<span class="font-display text-2xl font-semibold text-white">
-CloudStay
-</span>
-
-</a>
-
-
-<p class="mt-3 max-w-xs text-sm text-white/50">
-Premium rooms and effortless booking for your most comfortable stay.
-</p>
-
-
-</div>
-
-
-<nav class="flex gap-6 text-sm">
-
-<a href="#home">Home</a>
-<a href="#rooms">Rooms</a>
-<a href="#booking">Booking</a>
-<a href="#login">Login</a>
-<a href="#signup">Sign Up</a>
-
-</nav>
-
-
-</div>
-
-
-<div class="mt-12 border-t border-white/10 pt-6 text-center text-sm">
-
-© 2026 CloudStay Hotel Booking System
-
-</div>
-
-
-</div>
-
-
-</footer>
-
-</html>
-
-<script>
-
-//================= HEADER =================
-
-// Scroll effect
-const header = document.getElementById("header");
-const logo = document.getElementById("logo");
-const menuBtn = document.getElementById("menuBtn");
-
-
-window.addEventListener("scroll", () => {
-
-
-  if(window.scrollY > 24){
-
-
-    header.className =
-    "fixed inset-x-0 top-0 z-50 transition-colors duration-300 bg-cream/90 shadow-sm backdrop-blur border-b border-ink/5";
-
-
-    logo.classList.remove("text-white");
-    logo.classList.add("text-ink");
-
-    menuBtn.classList.remove("text-white");
-    menuBtn.classList.add("text-ink");
-
-
-  }
-
-  else{
-
-
-    header.className =
-    "fixed inset-x-0 top-0 z-50 transition-colors duration-300 bg-transparent";
-
-
-    logo.classList.remove("text-ink");
-    logo.classList.add("text-white");
-
-
-    menuBtn.classList.remove("text-ink");
-    menuBtn.classList.add("text-white");
-
-
-  }
-
-
-});
-
-
-
-
-
-// Mobile menu toggle
-const mobileMenu = document.getElementById("mobileMenu");
-const menuIcon = document.getElementById("menuIcon");
-
-
-menuBtn.addEventListener("click",()=>{
-
-
-  if(mobileMenu.classList.contains("hidden")){
-
-
-    mobileMenu.classList.remove("hidden");
-
-
-    menuIcon.setAttribute(
-      "data-lucide",
-      "x"
-    );
-
-
-  }
-
-  else{
-
-
-    mobileMenu.classList.add("hidden");
-
-
-    menuIcon.setAttribute(
-      "data-lucide",
-      "menu"
-    );
-
-
-  }
-
-
-  lucide.createIcons();
-
-
-});
-
-
-
-
-
-// Close mobile menu after clicking link
-document.querySelectorAll("#mobileMenu a").forEach(link=>{
-
-  link.addEventListener("click",()=>{
-
-    mobileMenu.classList.add("hidden");
-
-    menuIcon.setAttribute(
-      "data-lucide",
-      "menu"
-    );
-
-    lucide.createIcons();
-
-  });
-
-});
-
-
-
-lucide.createIcons();
-
-//================= HERO =================
-
-lucide.createIcons();
-
-//================= ROOMS =================
-
-lucide.createIcons();
-
-//================= BOOKING =================
-
-const form = document.getElementById("form");
-
-form.addEventListener("submit", function(e){
-
-  e.preventDefault();
-
-
-  let room = document.getElementById("roomType").value;
-  let checkIn = document.getElementById("checkIn").value;
-  let checkOut = document.getElementById("checkOut").value;
-
-
-  document.getElementById("bookingForm").classList.add("hidden");
-
-  document.getElementById("confirmation").classList.remove("hidden");
-  document.getElementById("confirmation").classList.add("flex");
-
-
-  document.getElementById("message").innerHTML =
-  `Your ${room.toLowerCase()} is reserved 
-  ${checkIn ? "from " + checkIn : ""} 
-  ${checkOut ? " to " + checkOut : ""}.`;
-
-});
-
-
-function newBooking(){
-
-  document.getElementById("bookingForm").classList.remove("hidden");
-
-  document.getElementById("confirmation").classList.add("hidden");
-
-  document.getElementById("form").reset();
-
-}
-
-
-lucide.createIcons();
-
-//================= LOGIN =================
-const loginForm = document.getElementById("loginForm");
-
-const successMessage = document.getElementById("successMessage");
-
-
-
-loginForm.addEventListener("submit", function(e){
-
-
-  e.preventDefault();
-
-
-
-  const email = document.getElementById("email").value;
-
-  const password = document.getElementById("password").value;
-
-
-
-  if(email && password){
-
-
-    successMessage.classList.remove("hidden");
-
-
-  }
-
-
-
-});
-
-
-
-lucide.createIcons();
-
-//================= SIGN UP =================
-
-const signupForm = document.getElementById("signupForm");
-
-const errorMessage = document.getElementById("errorMessage");
-
-const signupContent = document.getElementById("signupContent");
-
-const successBox = document.getElementById("successBox");
-
-
-
-
-form.addEventListener("submit", function(event){
-
-
-event.preventDefault();
-
-
-
-let password =
-document.getElementById("password").value;
-
-
-let confirmPassword =
-document.getElementById("confirmPassword").value;
-
-
-
-errorMessage.classList.add("hidden");
-
-
-
-if(password.length < 8){
-
-
-errorMessage.textContent =
-"Your password must contain at least 8 characters.";
-
-
-errorMessage.classList.remove("hidden");
-
-
-return;
-
-}
-
-
-
-if(password !== confirmPassword){
-
-
-errorMessage.textContent =
-"Your passwords do not match. Please try again.";
-
-
-errorMessage.classList.remove("hidden");
-
-
-return;
-
-
-}
-
-
-
-
-signupContent.classList.add("hidden");
-
-successBox.classList.remove("hidden");
-
-successBox.classList.add("flex");
-
-
-
-});
-
-
-
-
-
-lucide.createIcons();
-
-//================= FOOTER =================
-
-lucide.createIcons();
-
-/* ================= HEADER SCRIPT ================= */
-
-window.addEventListener("scroll",()=>{
-
-
-    if(window.scrollY > 24){
-
-        header.classList.add(
-        "bg-cream/90",
-        "shadow-sm",
-        "backdrop-blur"
+            }
         );
 
-    }
 
-});
+        /* =====================================================
+           DISPLAY BOOKING INFORMATION
+        ====================================================== */
 
+        function displayBooking(booking) {
 
+            if (!booking) {
+                return;
+            }
 
 
+            document.getElementById(
+                "noBooking"
+            ).classList.add("hidden");
 
 
+            document.getElementById(
+                "bookingDetails"
+            ).classList.remove("hidden");
 
-/* ================= LOGIN SCRIPT ================= */
 
-if(loginForm){
+            document.getElementById(
+                "infoRoom"
+            ).textContent =
+                booking.room;
 
 
-loginForm.addEventListener("submit",function(e){
+            document.getElementById(
+                "infoCheckIn"
+            ).textContent =
+                booking.checkIn;
 
-    e.preventDefault();
 
-    document
-    .getElementById("successMessage")
-    .classList.remove("hidden");
+            document.getElementById(
+                "infoCheckOut"
+            ).textContent =
+                booking.checkOut;
 
-});
 
+            document.getElementById(
+                "infoPrice"
+            ).textContent =
+                "RM" + booking.pricePerNight;
 
-}
 
+            document.getElementById(
+                "infoBookingId"
+            ).textContent =
+                booking.bookingId;
 
 
+            document.getElementById(
+                "infoNights"
+            ).textContent =
+                booking.nights +
+                (
+                    booking.nights === 1
+                        ? " Night"
+                        : " Nights"
+                );
 
 
+            document.getElementById(
+                "infoTotal"
+            ).textContent =
+                "RM" +
+                booking.total;
 
+        }
 
-/* ================= SIGNUP SCRIPT ================= */
 
-if(signupForm){
+        /* =====================================================
+           LOAD EXISTING BOOKING
+        ====================================================== */
 
+        function loadBooking() {
 
-signupForm.addEventListener("submit",function(e){
+            const savedBooking =
+                localStorage.getItem(
+                    "cloudstayBooking"
+                );
 
 
-e.preventDefault();
+            if (!savedBooking) {
+                return;
+            }
 
 
-let password =
-document.getElementById("password").value;
+            try {
 
+                const booking =
+                    JSON.parse(savedBooking);
 
-let confirmPassword =
-document.getElementById("confirmPassword").value;
+                displayBooking(booking);
 
+            } catch (error) {
 
-let error =
-document.getElementById("errorMessage");
+                console.error(
+                    "Unable to load booking:",
+                    error
+                );
 
+            }
 
+        }
 
-if(password.length < 8){
 
+        loadBooking();
 
-error.innerHTML =
-"Your password must contain at least 8 characters.";
 
+        /* =====================================================
+           MAKE ANOTHER BOOKING
+        ====================================================== */
 
-error.classList.remove("hidden");
+        newBookingButton.addEventListener(
+            "click",
+            function () {
 
+                bookingFormContainer.classList.remove(
+                    "hidden"
+                );
 
-return;
+                confirmation.classList.add(
+                    "hidden"
+                );
 
+                confirmation.classList.remove(
+                    "flex"
+                );
 
-}
+                bookingFormElement.reset();
 
+            }
+        );
 
 
+        /* =====================================================
+           CLEAR BOOKING
+        ====================================================== */
 
-if(password !== confirmPassword){
+        document
+            .getElementById("clearBookingButton")
+            .addEventListener(
+                "click",
+                function () {
 
+                    localStorage.removeItem(
+                        "cloudstayBooking"
+                    );
 
-error.innerHTML =
-"Your passwords do not match. Please try again.";
 
+                    document
+                        .getElementById("bookingDetails")
+                        .classList.add("hidden");
 
-error.classList.remove("hidden");
 
+                    document
+                        .getElementById("noBooking")
+                        .classList.remove("hidden");
 
-return;
+                }
+            );
 
 
-}
+        /* =====================================================
+           LOGIN
+        ====================================================== */
 
+        const loginForm =
+            document.getElementById("loginForm");
 
+        const loginSuccess =
+            document.getElementById("loginSuccess");
 
-document
-.getElementById("signupContent")
-.classList.add("hidden");
+        const loginError =
+            document.getElementById("loginError");
 
 
+        loginForm.addEventListener(
+            "submit",
+            function (event) {
 
-document
-.getElementById("successBox")
-.classList.remove("hidden");
+                event.preventDefault();
 
 
+                const email =
+                    document.getElementById(
+                        "loginEmail"
+                    ).value.trim();
 
-});
 
+                const password =
+                    document.getElementById(
+                        "loginPassword"
+                    ).value;
 
-}
 
+                loginError.classList.add(
+                    "hidden"
+                );
 
+                loginSuccess.classList.add(
+                    "hidden"
+                );
 
 
+                if (!email || !password) {
 
+                    loginError.textContent =
+                        "Please enter your email and password.";
 
+                    loginError.classList.remove(
+                        "hidden"
+                    );
 
+                    return;
 
-/* Create Lucide Icons */
+                }
 
-lucide.createIcons();
 
+                loginSuccess.classList.remove(
+                    "hidden"
+                );
 
-</script>
+            }
+        );
+
+
+        /* =====================================================
+           SIGN UP
+        ====================================================== */
+
+        const signupForm =
+            document.getElementById("signupForm");
+
+        const signupError =
+            document.getElementById("signupError");
+
+        const signupContent =
+            document.getElementById("signupContent");
+
+        const successBox =
+            document.getElementById("successBox");
+
+
+        signupForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const fullName =
+                    document.getElementById(
+                        "signupFullName"
+                    ).value.trim();
+
+
+                const email =
+                    document.getElementById(
+                        "signupEmail"
+                    ).value.trim();
+
+
+                const password =
+                    document.getElementById(
+                        "signupPassword"
+                    ).value;
+
+
+                const confirmPassword =
+                    document.getElementById(
+                        "confirmPassword"
+                    ).value;
+
+
+                const terms =
+                    document.getElementById(
+                        "terms"
+                    ).checked;
+
+
+                signupError.classList.add(
+                    "hidden"
+                );
+
+
+                if (!fullName || !email) {
+
+                    signupError.textContent =
+                        "Please complete all required fields.";
+
+                    signupError.classList.remove(
+                        "hidden"
+                    );
+
+                    return;
+
+                }
+
+
+                if (password.length < 8) {
+
+                    signupError.textContent =
+                        "Your password must contain at least 8 characters.";
+
+                    signupError.classList.remove(
+                        "hidden"
+                    );
+
+                    return;
+
+                }
+
+
+                if (password !== confirmPassword) {
+
+                    signupError.textContent =
+                        "Your passwords do not match. Please try again.";
+
+                    signupError.classList.remove(
+                        "hidden"
+                    );
+
+                    return;
+
+                }
+
+
+                if (!terms) {
+
+                    signupError.textContent =
+                        "Please agree to the terms of service and privacy policy.";
+
+                    signupError.classList.remove(
+                        "hidden"
+                    );
+
+                    return;
+
+                }
+
+
+                signupContent.classList.add(
+                    "hidden"
+                );
+
+
+                successBox.classList.remove(
+                    "hidden"
+                );
+
+                successBox.classList.add(
+                    "flex"
+                );
+
+
+                lucide.createIcons();
+
+            }
+        );
+
+
+        /* =====================================================
+           FINAL LUCIDE INITIALISATION
+        ====================================================== */
+
+        lucide.createIcons();
+
+    </script>
+
+</body>
 
 </html>
