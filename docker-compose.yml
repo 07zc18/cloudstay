@@ -6,7 +6,7 @@ services:
     image: mysql:8.0
     container_name: cloudstay-mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=cloudstay_db
     ports:
       - "3316:3306"
@@ -14,14 +14,14 @@ services:
       - mysql-data:/var/lib/mysql
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-ppassword"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
       interval: 5s
       timeout: 5s
       retries: 10
     networks:
       - cloudstay-network
     restart: unless-stopped
- 
+
   mongo:
     image: mongo:7
     container_name: cloudstay-mongo
@@ -37,7 +37,7 @@ services:
     networks:
       - cloudstay-network
     restart: unless-stopped
- 
+
   redis:
     image: redis:7-alpine
     container_name: cloudstay-redis
@@ -51,9 +51,9 @@ services:
     networks:
       - cloudstay-network
     restart: unless-stopped
-    # No named volume — cart data is intentionally disposable.
-    # If Redis restarts, carts reset. Acceptable tradeoff (see Week 4 Lab 2).
- 
+    # No named volume — this data is intentionally disposable.
+    # If Redis restarts, cached/temporary data resets. Acceptable tradeoff.
+
   # ─────────────────────────────────────────────
   # Application services
   # ─────────────────────────────────────────────
@@ -64,10 +64,10 @@ services:
       - "3101:3001"
     environment:
       - MYSQL_HOST=db
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=password
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_DATABASE=cloudstay_db
-      - JWT_SECRET=your_jwt_secret
+      - JWT_SECRET=${JWT_SECRET}
       - PORT=3001
     depends_on:
       db:
@@ -75,7 +75,7 @@ services:
     networks:
       - cloudstay-network
     restart: unless-stopped
- 
+
   room-service:
     container_name: cloudstay-room-service
     build: ./services/room-service
@@ -83,8 +83,8 @@ services:
       - "3102:3002"
     environment:
       - MYSQL_HOST=db
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=password
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_DATABASE=cloudstay_db
       - PORT=3002
     depends_on:
@@ -93,19 +93,24 @@ services:
     networks:
       - cloudstay-network
     restart: unless-stopped
- 
+
   booking-service:
     container_name: cloudstay-booking-service
     build: ./services/booking-service
     ports:
       - "3103:3003"
     environment:
+      - MYSQL_HOST=db
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=cloudstay_db
       - MONGO_URL=mongodb://mongo:27017
       - REDIS_URL=redis://redis:6379
-      - JWT_SECRET=your_jwt_secret
+      - JWT_SECRET=${JWT_SECRET}
       - PORT=3003
-
     depends_on:
+      db:
+        condition: service_healthy
       mongo:
         condition: service_healthy
       redis:
@@ -113,12 +118,31 @@ services:
     networks:
       - cloudstay-network
     restart: unless-stopped
- 
+
+  api-gateway:
+    container_name: cloudstay-api-gateway
+    build: ./services/api-gateway
+    ports:
+      - "8000:8000"
+    environment:
+      - USER_SERVICE_URL=http://user-service:3001
+      - ROOM_SERVICE_URL=http://room-service:3002
+      - BOOKING_SERVICE_URL=http://booking-service:3003
+      - JWT_SECRET=${JWT_SECRET}
+      - PORT=8000
+    depends_on:
+      - user-service
+      - room-service
+      - booking-service
+    networks:
+      - cloudstay-network
+    restart: unless-stopped
+
 volumes:
   mysql-data:
   mongo-data:
-  # redis-data intentionally omitted — see note above
- 
+  # redis data intentionally has no named volume — see note above
+
 networks:
   cloudstay-network:
     driver: bridge
