@@ -23,8 +23,8 @@ app.get('/health', (req, res) => {
 // ================================
 const db = mysql.createPool({
     host: process.env.MYSQL_HOST || 'db',
-    user: process.env.MYSQL_USER || 'root',
-    password: process.env.MYSQL_PASSWORD || 'password',
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
     database: process.env.MYSQL_DATABASE || 'cloudstay_db'
 });
 
