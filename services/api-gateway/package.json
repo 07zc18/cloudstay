@@ -1,7 +1,7 @@
 {
   "name": "api-gateway",
   "version": "1.0.0",
-  "description": "CloudEats API Gateway — single entry point",
+  "description": "CloudStay API Gateway — single entry point",
   "main": "src/server.js",
   "scripts": { "start": "node src/server.js" },
   "dependencies": {
